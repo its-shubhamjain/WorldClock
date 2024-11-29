@@ -1,79 +1,76 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# World Clock App
 
-# Getting Started
+This is a React Native application that displays the current time for a selected city, state, or country. The app allows users to browse through a list of countries, states, and cities and dynamically fetches the corresponding time based on the selected location's latitude and longitude.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Features
 
-## Step 1: Start the Metro Server
+- **Country, State, and City Dropdowns**: Users can select a country, state, and city dynamically using dropdown menus.
+- **Live Time Updates**: The app fetches the current time for the selected location and updates it every second.
+- **Asynchronous Data Fetching**: Data for countries, states, and cities is fetched from a third-party API.
+- **Error Handling**: Handles errors gracefully when fetching data from APIs.
+- **Loading Indicators**: Displays a loader when data is being fetched.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Installation
 
-To start Metro, run the following command from the _root_ of your React Native project:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/its-shubhamjain/WorldClock.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd WorldClock
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-# using npm
-npm start
+## Usage
 
-# OR using Yarn
-yarn start
-```
+1. Start the application:
+   ```bash
+   npx react-native run-android   # For Android
+   npx react-native run-ios       # For iOS
+   ```
 
-## Step 2: Start your Application
+2. Select a country from the dropdown menu. States and cities will populate based on the selected country.
+3. The app will fetch and display the current time for the selected location.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Dependencies
 
-### For Android
+- [React Native](https://reactnative.dev/): Framework for building native apps using React.
+- [Axios](https://axios-http.com/): Promise-based HTTP client for fetching data.
+- [react-native-dropdown-picker](https://hossein-zare.github.io/react-native-dropdown-picker-website/): Component for creating dropdown menus.
 
-```bash
-# using npm
-npm run android
+## API Usage
 
-# OR using Yarn
-yarn android
-```
+The app integrates with the following APIs:
 
-### For iOS
+1. **Country-State-City Search API**
+   - Used to fetch countries, states, and cities dynamically.
+   - API Documentation: [RapidAPI](https://rapidapi.com)
 
-```bash
-# using npm
-npm run ios
+2. **World Time API**
+   - Used to fetch the current time based on latitude and longitude.
+   - API Documentation: [API Ninjas](https://api-ninjas.com)
 
-# OR using Yarn
-yarn ios
-```
+## Environment Variables
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+To run the app, set your API keys in the code:
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+1. Replace `RAPID_API_KEY` with your RapidAPI key.
+2. Replace the `X-Api-Key` for the World Time API with your own key.
 
-## Step 3: Modifying your App
+## Screenshots
 
-Now that you have successfully run the app, let's modify it.
+Add screenshots of the app here to showcase the functionality.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Acknowledgments
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- [React Native Documentation](https://reactnative.dev/docs/getting-started)
+- [RapidAPI](https://rapidapi.com) for providing APIs.
+- [API Ninjas](https://api-ninjas.com) for time-related APIs.
 
-## Congratulations! :tada:
+## License
 
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under the MIT License. See the LICENSE file for details.
